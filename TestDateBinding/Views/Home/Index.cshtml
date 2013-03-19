@@ -1,0 +1,18 @@
+﻿@model DateTime
+
+  @using (Html.BeginForm())
+  { 
+    <input id="date" name="date" value="01.05.2013"/>
+    <button type="submit" name="button" >Post-request</button>
+  }
+
+@using (Html.BeginForm("Index","Home", FormMethod.Get))
+  { 
+    <input id="date" name="date" value="01.05.2013"/>
+    <button type="submit" name="button" >Get-request</button>
+  }
+
+
+<p>Sended value: Day @Model.Day, Month @Model.Month, Year @Model.Year
+    </p>
+
